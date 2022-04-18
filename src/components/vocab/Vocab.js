@@ -1,23 +1,19 @@
 import React, { useState } from 'react'
 import { Layout, Table, Col, Row, Input, Button } from 'antd';
-import { vocabData } from './Data'
 import { useDispatch, useSelector } from 'react-redux'
 import { vocabListSelector } from '../../redux/selectors';
+import { addVocab } from '../../redux/actions';
 
 const { Content } = Layout;
 
 function VocabContent() {
-  // const vocab = useSelector(vocabListSelector);
+  const vocabList = useSelector((state) => state.vocabList);
   const dispatch = useDispatch();
-
-  const [name, setName] = useState('');
-  // const [type, setType] = useState('');
-  // const [mean, setMean] = useState('');
-
-  const handleChange = (e) => {
-    console.log(e.target.value)
-  }
-
+  
+  const [name, setName] = useState();
+  const [type, setType] = useState();
+  const [mean, setMean] = useState()
+  
   const columns = [
     {
       title: 'Từ vựng',
@@ -36,23 +32,33 @@ function VocabContent() {
       key: 'mean',
     }
   ]
-
+  
+  // const handleClick = () => {
+    //   dispatch(addVocab({
+      //     key: vocab[vocab.length - 1].key + 1,
+      //     name,
+      //     type,
+      //     mean,
+      //   }))
+      // }
+      
+    
   return (
     <Content className="site-layout" style={{ padding: '0 50px', marginTop: 104, height: 610 }}>
       <div className="site-layout-background" style={{ padding: 24, minHeight: 560, borderRadius: 10 }}>
         <Row>
           <Col span={24}>
-            <Table columns={columns} dataSource={vocabData} />
+            <Table columns={columns} dataSource={vocabList} />
           </Col>
           <Row>
             <Col>
-              <Input value={name} onChange={handleChange} style={{ width: 120 }} />
+              <Input value={name} onChange={e => setName(e.target.value)} style={{ width: 120 }} />
             </Col>
             <Col>
-              <Input style={{ width: 120, marginLeft: 60 }} />
+              <Input value={type} onChange={e => setType(e.target.value)} style={{ width: 120, marginLeft: 60 }} />
             </Col>
             <Col>
-              <Input style={{ width: 120, marginLeft: 60 }} />
+              <Input value={mean} onChange={e => setMean(e.target.value)} style={{ width: 120, marginLeft: 60 }} />
             </Col>
             <Col>
               <Button type="primary" style={{ marginLeft: 60 }}>Add</Button>
