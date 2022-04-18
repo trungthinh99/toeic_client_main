@@ -1,14 +1,28 @@
 import './App.css';
 import { Layout } from 'antd';
+import { Routes, Route } from "react-router-dom";
 import AppHeader from './components/header/AppHeader';
 import Home from './components/homepage/Home';
+import VocabContent from './components/vocab/Vocab';
+import ListenContent from './components/listen/Listening';
+import ReadContent from './components/reading/Reading';
+import Interface from './components/game/Interface';
+import LogIn from './components/login/LogOut';
 
 function App() {
     return (
         <div className="App">
-            <Layout>
+            <Layout style={{ backgoundColor: '#fcfaf2' }}>
                 <AppHeader />
-                <Home />
+                <Routes>
+                    <Route path="home" element={<Home />}/>
+                    <Route path="vocab" element={<VocabContent />}/>
+                    <Route path="vocab" element={<VocabContent />}/>
+                    <Route path="listen" element={<ListenContent />}/>
+                    <Route path="reading" element={<ReadContent />}/>
+                    <Route path="game" element={<Interface />}/>
+                    <Route path="login" element={<LogIn />}/>
+                </Routes>
             </Layout>
         </div>
     );
