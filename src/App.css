@@ -3,3 +3,7 @@
 .ant-layout-header {
   background: #22075e;
 }
+
+.site-layout .site-layout-background {
+  background: #fff;
+}
