@@ -14,6 +14,15 @@ const rootReducer = (state = initState, action) => {
                     action.payload
                 ]
             }
+
+        case 'vocabList/deleteVocab':
+            return {
+                ...state,
+                vocabList: state.vocabList.filter((vocab) => vocab.key !== action.payload.key)
+            }
+
+        default:
+            return state;
     }
 }
 

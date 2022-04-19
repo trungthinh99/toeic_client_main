@@ -4,3 +4,10 @@ export const addVocab = (payload) => {
         payload,
     }
 }
+
+export const deleteVocab = (payload) => {
+    return {
+        type: 'vocabList/deleteVocab',
+        payload,
+    }
+}
