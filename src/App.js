@@ -8,6 +8,8 @@ import ListenContent from './components/listen/Listening';
 import ReadContent from './components/reading/Reading';
 import Interface from './components/game/Interface';
 import LogIn from './components/login/LogOut';
+import Score from './components/game/Score';
+import Amount from './components/game/Amount';
 
 function App() {
     return (
@@ -20,8 +22,10 @@ function App() {
                     <Route path="vocab" element={<VocabContent />}/>
                     <Route path="listen" element={<ListenContent />}/>
                     <Route path="reading" element={<ReadContent />}/>
-                    <Route path="game" element={<Interface />}/>
+                    <Route path="game" element={<Amount />}/>
                     <Route path="login" element={<LogIn />}/>
+                    <Route path="score" element={<Score />}/>
+                    <Route path="playgame" element={<Interface />}/>
                 </Routes>
             </Layout>
         </div>
