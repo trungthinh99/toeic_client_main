@@ -6,7 +6,7 @@ const { Header } = Layout;
 
 function AppHeader() {
   return (
-    <Header style={{ position: 'fixed', zIndex: 1, width: '100%', height: '54px' }}>
+    <Header style={{ position: 'relative', zIndex: 1, width: '100%', height: '54px' }}>
       <Row>
         <Col style={{ display: 'flex' }} span={12}>
           <Typography.Paragraph

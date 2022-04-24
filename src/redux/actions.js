@@ -1,3 +1,5 @@
+import { USER_DELETE_REQUEST } from "./constant"
+
 export const addVocab = (payload) => {
     return {
         type: 'vocabList/addVocab',
@@ -5,10 +7,10 @@ export const addVocab = (payload) => {
     }
 }
 
-export const deleteVocab = (payload) => {
+export const deleteVocab = (data) => {
     return {
-        type: 'vocabList/deleteVocab',
-        payload,
+        type: USER_DELETE_REQUEST,
+        payload: data
     }
 }
 

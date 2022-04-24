@@ -9,8 +9,8 @@ const { Content } = Layout;
 function Amount() {
   const dispatch = useDispatch();
   return (
-    <Content className="site-layout" style={{ padding: '0 50px', marginTop: 104, height: 610 }}>
-      <div className="site-layout-background" style={{ padding: 24, minHeight: 560, borderRadius: 10, }}>
+    <Content className="site-layout" style={{ padding: '0 50px', marginTop: 50, minHeight: '85vh' }}>
+      <div className="site-layout-background" style={{ padding: 24, minHeight: '78vh', borderRadius: 10, }}>
         <Row justify="center" align="middle" style={{ height: 450, flexDirection: 'column', display: 'flex' }}>
           <Col>
             <Typography.Paragraph

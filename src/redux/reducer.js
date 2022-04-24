@@ -1,5 +1,6 @@
 import { quizData } from '../components/game/Data'
 import { vocabData } from '../components/vocab/Data'
+import {USER_DELETE_SUCCESS } from './constant'
 
 const initState = {
     vocabList: vocabData,
@@ -21,7 +22,7 @@ const rootReducer = (state = initState, action) => {
                 ]
             }
 
-        case 'vocabList/deleteVocab':
+        case USER_DELETE_SUCCESS:
             return {
                 ...state,
                 vocabList: state.vocabList.filter((vocab) => vocab.key !== action.payload.key)
