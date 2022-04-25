@@ -8,7 +8,7 @@ import { addVocab, deleteVocab } from '../../redux/modules/vocab/action';
 const { Content } = Layout;
 
 function VocabContent() {
-  const vocabList = useSelector((state) => state.vocab.vocabList);
+  const vocab = useSelector(vocabListSelector);
   const dispatch = useDispatch();
   
   const [name, setName] = useState();
@@ -50,7 +50,7 @@ function VocabContent() {
   
   const handleClick = () => {
     dispatch(addVocab({
-      key: vocabList[vocabList.length - 1].key + 1,
+      key: vocab[vocab.length - 1].key + 1,
       name,
       type,
       mean,
@@ -66,7 +66,7 @@ function VocabContent() {
       <div className="site-layout-background" style={{ padding: 24, minHeight: '78vh', borderRadius: 10 }}>
         <Row>
           <Col span={24}>
-            <Table columns={columns} dataSource={vocabList} />
+            <Table columns={columns} dataSource={vocab} />
           </Col>
           <Row>
             <Col>

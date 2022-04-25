@@ -2,7 +2,7 @@ import { VOCAB_ADD, VOCAB_DELETE } from "./constant"
 import { vocabData } from "./Data"
 
 const initState = {
-    vocabList: vocabData
+    list: vocabData
 }
 
 const vocabReducer = (state = initState, action) => {
@@ -10,8 +10,8 @@ const vocabReducer = (state = initState, action) => {
         case VOCAB_ADD:
             return {
                 ...state,
-                vocabList: [
-                    ...state.vocabList,
+                list: [
+                    ...state.list,
                     action.payload
                 ]
             }
@@ -19,7 +19,7 @@ const vocabReducer = (state = initState, action) => {
         case VOCAB_DELETE:
             return {
                 ...state,
-                vocabList: state.vocabList.filter((vocab) => vocab.key !== action.payload.key)
+                list: state.list.filter((vocab) => vocab.key !== action.payload.key)
             }
         
         default:

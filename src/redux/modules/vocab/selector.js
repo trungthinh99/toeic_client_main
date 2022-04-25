@@ -1,1 +1,1 @@
-export const vocabListSelector = (state) => state.vocabList;
+export const vocabListSelector = (state) => state.vocab.list;
