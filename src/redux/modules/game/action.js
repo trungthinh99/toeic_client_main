@@ -1,4 +1,4 @@
-import { GAME_AMOUNT, GAME_LOAD, GAME_SCORE } from "./constant"
+import { GAME_SCORE_CHANGE, GAME_LOAD, GAME_AMOUNT_CHANGE } from "./constant"
 
 export const gameLoad = (payload) => {
     return {
@@ -9,14 +9,14 @@ export const gameLoad = (payload) => {
 
 export const gameScoreChange = (payload) => {
     return {
-        type: GAME_SCORE,
+        type: GAME_SCORE_CHANGE,
         payload,
     }
 }
 
 export const amountChange = (payload) => {
     return {
-        type: GAME_AMOUNT,
+        type: GAME_AMOUNT_CHANGE,
         payload,
     }
 }

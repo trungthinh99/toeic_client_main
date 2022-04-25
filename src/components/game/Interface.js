@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from "react-router-dom";
 import { Layout, Typography, Row, Col, Button } from 'antd';
 import { useDispatch, useSelector } from 'react-redux'
-import { gameLoadSelector, gameScoreSelector, gameAmountSelector } from '../../redux/selectors';
-import { gameScoreChange } from '../../redux/actions';
+import { gameScoreChange } from '../../redux/modules/game/action';
+import { gameAmountSelector, gameLoadSelector, gameScoreSelector } from '../../redux/modules/game/selector';
 
 const { Content } = Layout;
 
@@ -21,11 +21,12 @@ function Interface() {
         return Math.floor(Math.random() * Math.floor(max))
     }
 
-    // console.log(gameScore);
-    // console.log(gameLoad.quizData[0].incorrect_answers.length);
+    // console.log(gameAmount);
+    // console.log(gameLoad.questionList[0]);
+    // console.log(gameLoad.questionList[0].incorrect_answers.length);
     
     useEffect(() => {
-        const question = gameLoad.quizData[questionIndex];
+        const question = gameLoad.questionList[questionIndex];
         let answers = [...question.incorrect_answers];
         answers.splice(
             getRandomInt(question.incorrect_answers.length),
@@ -36,7 +37,7 @@ function Interface() {
     }, [questionIndex])
 
     const handleClick = (e) => {
-        const question = gameLoad.quizData[questionIndex];
+        const question = gameLoad.questionList[questionIndex];
         if (e.target.textContent === question.correct_answer) {
             dispatch(gameScoreChange(gameScore + 1))
         }
@@ -63,7 +64,7 @@ function Interface() {
                         <Typography.Paragraph
                             style={{ fontWeight: 'bold', fontSize: 26 }}
                         >
-                            {gameLoad.quizData[questionIndex].question}
+                            {gameLoad.questionList[questionIndex].question}
                         </Typography.Paragraph>
                     </Col>
                     <Col style={{ width: 840 }}>

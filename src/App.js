@@ -19,7 +19,6 @@ function App() {
                 <Routes>
                     <Route path="home" element={<Home />}/>
                     <Route path="vocab" element={<VocabContent />}/>
-                    <Route path="vocab" element={<VocabContent />}/>
                     <Route path="listen" element={<ListenContent />}/>
                     <Route path="reading" element={<ReadContent />}/>
                     <Route path="game" element={<Amount />}/>

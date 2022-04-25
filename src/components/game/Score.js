@@ -1,14 +1,13 @@
 import React from 'react'
 import { Layout, Typography, Row, Col, Button } from 'antd';
 import { useSelector } from 'react-redux'
-import { gameScoreSelector } from '../../redux/selectors';
 import { Link } from "react-router-dom";
+import { gameScoreSelector } from '../../redux/modules/game/selector';
 
 const { Content } = Layout;
 
 function Score() {
     const gameScore = useSelector(gameScoreSelector)
-
     return (
         <Content className="site-layout" style={{ padding: '0 50px', marginTop: 50, minHeight: '85vh' }}>
             <div className="site-layout-background" style={{ padding: 24, minHeight: '78vh', borderRadius: 10,  }}>

@@ -1,8 +1,8 @@
 import React from 'react'
 import { Layout, Typography, Row, Col, Button, Input } from 'antd';
 import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from 'react-redux'
-import { amountChange } from '../../redux/actions';
+import { useDispatch } from 'react-redux'
+import { amountChange } from '../../redux/modules/game/action';
 
 const { Content } = Layout;
 
