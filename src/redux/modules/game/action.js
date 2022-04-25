@@ -1,23 +1,22 @@
-import { VOCAB_DELETE } from "./constant"
-
+import { GAME_AMOUNT, GAME_LOAD, GAME_SCORE } from "./constant"
 
 export const gameLoad = (payload) => {
     return {
-        type: 'game/gameLoad',
+        type: GAME_LOAD,
         payload,
     }
 }
 
 export const gameScoreChange = (payload) => {
     return {
-        type: 'game/gameScoreChange',
+        type: GAME_SCORE,
         payload,
     }
 }
 
 export const amountChange = (payload) => {
     return {
-        type: 'game/amountChange',
+        type: GAME_AMOUNT,
         payload,
     }
 }

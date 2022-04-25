@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import { Layout, Table, Col, Row, Input, Button, Space } from 'antd';
 import { useDispatch, useSelector } from 'react-redux'
-import { vocabListSelector } from '../../redux/selectors';
-import { addVocab, deleteVocab } from '../../redux/actions';
+// import { addVocab, deleteVocab } from '../../redux/actions';
+import { vocabListSelector } from '../../redux/modules/vocab/selector';
+import { addVocab, deleteVocab } from '../../redux/modules/vocab/action';
 
 const { Content } = Layout;
 
 function VocabContent() {
-  const vocabList = useSelector(vocabListSelector);
+  const vocabList = useSelector((state) => state.vocab.vocabList);
   const dispatch = useDispatch();
   
   const [name, setName] = useState();
