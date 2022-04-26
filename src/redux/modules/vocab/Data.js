@@ -29,4 +29,40 @@ export const vocabData = [
       type: '(n/v)',
       mean: 'Phí/tính phí',
     },
+    // {
+    //   key: 6,
+    //   name: 'Charge',
+    //   type: '(n/v)',
+    //   mean: 'Phí/tính phí',
+    // },
+    // {
+    //   key: 7,
+    //   name: 'Charge',
+    //   type: '(n/v)',
+    //   mean: 'Phí/tính phí',
+    // },
+    // {
+    //   key: 8,
+    //   name: 'Charge',
+    //   type: '(n/v)',
+    //   mean: 'Phí/tính phí',
+    // },
+    // {
+    //   key: 9,
+    //   name: 'Charge',
+    //   type: '(n/v)',
+    //   mean: 'Phí/tính phí',
+    // },
+    // {
+    //   key: 10,
+    //   name: 'Charge',
+    //   type: '(n/v)',
+    //   mean: 'Phí/tính phí',
+    // },
+    // {
+    //   key: 11,
+    //   name: 'Charge',
+    //   type: '(n/v)',
+    //   mean: 'Phí/tính phí',
+    // },
 ]

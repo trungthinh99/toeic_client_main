@@ -7,3 +7,9 @@
 .site-layout .site-layout-background {
   background: #fff;
 }
+
+.table-title .ant-table-thead > tr > th{
+  text-align: center;
+}
+
+/* .ant-table-thead > tr > th */

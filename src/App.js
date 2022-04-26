@@ -18,6 +18,7 @@ function App() {
                 <AppHeader />
                 <Routes>
                     <Route path="home" element={<Home />}/>
+                    <Route path="/" element={<Home />}/>
                     <Route path="vocab" element={<VocabContent />}/>
                     <Route path="listen" element={<ListenContent />}/>
                     <Route path="reading" element={<ReadContent />}/>
