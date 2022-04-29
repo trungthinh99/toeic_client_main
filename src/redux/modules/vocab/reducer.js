@@ -1,4 +1,4 @@
-import { VOCAB_ADD, VOCAB_DELETE } from "./constant"
+import { VOCAB_ADD, VOCAB_DELETE, VOCAB_EDIT } from "./constant"
 import { vocabData } from "./Data"
 
 const initState = {
@@ -15,11 +15,19 @@ const vocabReducer = (state = initState, action) => {
                     action.payload
                 ]
             }
+
+        case VOCAB_EDIT:
+            return {
+                ...state,
+                list: state.list.map(word => {
+                    return word.key === action.payload.key ? action.payload : word
+                })
+            }
         
         case VOCAB_DELETE:
             return {
                 ...state,
-                list: state.list.filter((vocab) => vocab.key !== action.payload.key)
+                list: state.list.filter((vocab) => vocab.key !== action.payload)
             }
         
         default:

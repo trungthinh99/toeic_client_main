@@ -1,7 +1,7 @@
 import { TOGGLE_EDIT_MODAL, TOGGLE_ADD_MODAL, TOGGLE_CLOSE_MODAL } from "./constant";
 
 const initState = {
-    id: null,
+    key: null,
     isToggle: false
 }
 
@@ -10,14 +10,21 @@ const modalReucer = (state = initState, action) => {
         case TOGGLE_ADD_MODAL:
             return {
                 ...state,
-                id: null,
+                key: null,
+                isToggle: !state.isToggle
+            }
+
+        case TOGGLE_EDIT_MODAL:
+            return {
+                ...state,
+                key: action.payload,
                 isToggle: !state.isToggle
             }
 
         case TOGGLE_CLOSE_MODAL:
             return {
                 ...state,
-                id: null,
+                key: null,
                 isToggle: false
             }
 

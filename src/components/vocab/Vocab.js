@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { vocabListSelector } from '../../redux/modules/vocab/selector';
 import { addVocab, deleteVocab } from '../../redux/modules/vocab/action';
 import ModalCrud from '../CRUD vocab';
+import { modalEditVocab } from '../../redux/modules/vocab/modal/action';
 // import "../../App.css"
 import "./index.css"
 
@@ -32,15 +33,16 @@ function VocabContent() {
     },
     {
       title: 'Thao tác',
+      dataIndex: 'key',
       key: 'key',
-      render: (index) => (
+      render: (key) => (
         <Space>
-          <Button>
+          <Button onClick={() => dispatch(modalEditVocab(key))}>
             Edit
           </Button>
           <Button
             type="primary" danger
-            onClick={() => dispatch(deleteVocab({ key: index.key }))}
+            onClick={() => dispatch(deleteVocab(key))}
           >
             Delete
           </Button>
