@@ -1,0 +1,28 @@
+.nav-text {
+    font-weight: bold;
+    margin-bottom: 3px;
+    margin-top: 10px;
+    margin-right: 32px;
+    color: white;
+    line-height: 32px;
+}
+
+.nav-logout {
+    font-weight: bold;
+    margin-bottom: 3px;
+    margin-top: 10px;
+    color: white;
+    line-height: 32px;
+    float: right;
+}
+
+.nav-avatar {
+    margin-top: 10px;
+    margin-right: 10px;
+    color: white;
+    float: right;
+}
+
+.ant-dropdown-menu {
+    margin-top: 8px;
+}

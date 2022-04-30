@@ -27,6 +27,7 @@ function ModalCrud() {
   const [form] = Form.useForm();
 
   const showModal = () => {
+    form.setFieldsValue(initialValues);
     dispatch(modalAddVocab())
   };
 
@@ -78,6 +79,7 @@ function ModalCrud() {
         >
           Add Vocabulary
         </Button>
+        {modal.isToggle && 
         <Modal
           width={400}
           forceRender
@@ -120,6 +122,7 @@ function ModalCrud() {
             </Form.Item>
           </Form>
         </Modal>
+        }
       </Col>
     </Row>
   )

@@ -7,7 +7,7 @@ import VocabContent from './components/vocab/Vocab';
 import ListenContent from './components/listen/Listening';
 import ReadContent from './components/reading/Reading';
 import Interface from './components/game/Interface';
-import LogIn from './components/login/LogOut';
+import LogIn from './components/user/login/LogOut';
 import Score from './components/game/Score';
 import Amount from './components/game/Amount';
 
@@ -17,8 +17,8 @@ function App() {
             <Layout style={{ backgoundColor: '#fcfaf2' }}>
                 <AppHeader />
                 <Routes>
-                    <Route path="home" element={<Home />}/>
                     <Route path="/" element={<Home />}/>
+                    <Route path="home" element={<Home />}/>
                     <Route path="vocab" element={<VocabContent />}/>
                     <Route path="listen" element={<ListenContent />}/>
                     <Route path="reading" element={<ReadContent />}/>
