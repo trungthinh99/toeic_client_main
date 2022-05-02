@@ -13,12 +13,13 @@ import Score from './components/game/Score';
 import Amount from './components/game/Amount';
 import Profile from './components/user/profile';
 import AppHeaderLogin from './components/header/AppHeaderLogin';
+import Register from './components/user/register/Register';
 
 function App() {
     const [header, setHeader] = useState(<AppHeader />);
     let location = useLocation();
     useEffect(() => {
-        if (location.pathname === "/login")
+        if (location.pathname === "/login" || location.pathname === "/register")
         setHeader(<AppHeaderLogin />)
     }, [location])
 
@@ -37,6 +38,7 @@ function App() {
                     <Route path="score" element={<Score />}/>
                     <Route path="playgame" element={<Interface />}/>
                     <Route path="profile" element={<Profile />}/>
+                    <Route path="register" element={<Register />}/>
                 </Routes>
             </Layout>
         </div>

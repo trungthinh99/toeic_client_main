@@ -1,0 +1,13 @@
+.form {
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-item {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 38px;
+}
