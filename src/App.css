@@ -12,4 +12,15 @@
   text-align: center;
 }
 
-/* .ant-table-thead > tr > th */
+.content-css {
+  padding: 0px 50px;
+  margin-top: 50px;
+  min-height: 85vh;
+}
+
+.content-background-css {
+  background: #fff;
+  padding: 24px;
+  min-height: 78vh;
+  border-radius: 10px;
+}

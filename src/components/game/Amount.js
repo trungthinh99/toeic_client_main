@@ -3,15 +3,17 @@ import { Layout, Typography, Row, Col, Button, Input } from 'antd';
 import { Link } from "react-router-dom";
 import { useDispatch } from 'react-redux'
 import { amountChange } from '../../redux/modules/game/action';
+import "../../App.css"
+import "./index.css"
 
 const { Content } = Layout;
 
 function Amount() {
   const dispatch = useDispatch();
   return (
-    <Content className="site-layout" style={{ padding: '0 50px', marginTop: 50, minHeight: '85vh' }}>
-      <div className="site-layout-background" style={{ padding: 24, minHeight: '78vh', borderRadius: 10, }}>
-        <Row justify="center" align="middle" style={{ height: 450, flexDirection: 'column', display: 'flex' }}>
+    <Content className="content-css">
+      <div className="content-background-css">
+        <Row className="row-css">
           <Col>
             <Typography.Paragraph
               style={{ fontWeight: 'bold', fontSize: 38, marginBottom: 15 }}

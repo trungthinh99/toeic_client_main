@@ -1,0 +1,8 @@
+.row-css {
+    align-items: center;
+    justify-content: center;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0px;
+}

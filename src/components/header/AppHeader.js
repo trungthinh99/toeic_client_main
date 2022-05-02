@@ -9,10 +9,12 @@ const { Header } = Layout;
 const menu = (
   <Menu>
     <Menu.Item key="0">
-      <a href="/#">Chỉnh sửa tài khoản</a>
+      <Link to="/profile">Chỉnh sửa tài khoản</Link>
     </Menu.Item>
     <Menu.Divider />
-    <Menu.Item key="3">Đăng xuất</Menu.Item>
+    <Menu.Item key="1">
+      <Link to="/login">Đăng xuất</Link>
+    </Menu.Item>
   </Menu>
 );
 
@@ -22,7 +24,7 @@ function AppHeader() {
       <Row>
         <Col style={{ display: 'flex' }} span={12}>
           
-          <Typography.Paragraph className='nav-text'>
+          <Typography.Paragraph className='nav-text' style={{ paddingLeft: 0 }}>
             <Link to="/home" style={{ color: 'white' }}>Home</Link>
           </Typography.Paragraph>
 

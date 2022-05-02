@@ -4,6 +4,8 @@ import { Layout, Typography, Row, Col, Button } from 'antd';
 import { useDispatch, useSelector } from 'react-redux'
 import { gameScoreChange } from '../../redux/modules/game/action';
 import { gameAmountSelector, gameLoadSelector, gameScoreSelector } from '../../redux/modules/game/selector';
+import "../../App.css"
+import "./index.css"
 
 const { Content } = Layout;
 
@@ -50,9 +52,9 @@ function Interface() {
     }
 
     return (
-        <Content className="site-layout" style={{ padding: '0 50px', marginTop: 50, minHeight: '85vh' }}>
-            <div className="site-layout-background" style={{ padding: 24, minHeight: '78vh', borderRadius: 10 }}>
-                <Row justify="center" align="middle" style={{ height: 450 , flexDirection: 'column', display: 'flex' }}>
+        <Content className="content-css">
+            <div className="content-background-css">
+                <Row className="row-css">
                     <Col>
                         <Typography.Paragraph
                             style={{ fontWeight: 'bold', fontSize: 18 }}
