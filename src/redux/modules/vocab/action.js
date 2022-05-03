@@ -1,4 +1,4 @@
-import { VOCAB_ADD, VOCAB_DELETE, VOCAB_EDIT } from "./constant"
+import { VOCAB_ADD, VOCAB_DELETE, VOCAB_EDIT, VOCAB_FILTER } from "./constant"
 
 export const addVocab = (payload) => {
     return {
@@ -18,5 +18,12 @@ export const deleteVocab = (data) => {
     return {
         type: VOCAB_DELETE,
         payload: data
+    }
+}
+
+export const filterVocab = (text) => {
+    return {
+        type: VOCAB_FILTER,
+        payload: text
     }
 }

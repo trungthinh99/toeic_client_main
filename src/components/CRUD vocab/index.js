@@ -18,7 +18,7 @@ function ModalCrud() {
   const modal = useSelector(modalSelector)
   const vocab = useSelector(vocabListSelector)
   const userGetbyID = useSelector(getUserByID);
-  console.log(userGetbyID);
+  // console.log(userGetbyID);
   
   const [name, setName] = useState();
   const [type, setType] = useState();
@@ -118,7 +118,10 @@ function ModalCrud() {
               name="mean"
               rules={[{ required: true, message: 'Bắt buộc điền nghĩa!' }]}
             >
-              <Input onChange={e => setMean(e.target.value)}/>
+              <Input
+                onChange={e => setMean(e.target.value)}
+                onPressEnter={handleOk}
+              />
             </Form.Item>
           </Form>
         </Modal>
