@@ -1,6 +1,6 @@
 import './App.css';
 import { Layout } from 'antd';
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import AppHeader from './components/header/AppHeader';
 import Home from './components/homepage/Home';
@@ -16,33 +16,33 @@ import AppHeaderLogin from './components/header/AppHeaderLogin';
 import Register from './components/user/register/Register';
 
 function App() {
-    const [header, setHeader] = useState(<AppHeader />);
-    let location = useLocation();
-    useEffect(() => {
-        if (location.pathname === "/login" || location.pathname === "/register")
-        setHeader(<AppHeaderLogin />)
-    }, [location])
+  const [header, setHeader] = useState(<AppHeader />);
+  let location = useLocation();
+  useEffect(() => {
+    if (location.pathname === '/login' || location.pathname === '/register')
+      setHeader(<AppHeaderLogin />);
+  }, [location]);
 
-    return (
-        <div className="App">
-            <Layout style={{ backgoundColor: '#fcfaf2' }}>
-                {header}
-                <Routes>
-                    <Route path="/" element={<Home />}/>
-                    <Route path="home" element={<Home />}/>
-                    <Route path="vocab" element={<VocabContent />}/>
-                    <Route path="listen" element={<ListenContent />}/>
-                    <Route path="reading" element={<ReadContent />}/>
-                    <Route path="game" element={<Amount />}/>
-                    <Route path="login" element={<LogIn />}/>
-                    <Route path="score" element={<Score />}/>
-                    <Route path="playgame" element={<Interface />}/>
-                    <Route path="profile" element={<Profile />}/>
-                    <Route path="register" element={<Register />}/>
-                </Routes>
-            </Layout>
-        </div>
-    );
+  return (
+    <div className="App">
+      <Layout style={{ backgoundColor: '#fcfaf2' }}>
+        {header}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="home" element={<Home />} />
+          <Route path="vocab" element={<VocabContent />} />
+          <Route path="listen" element={<ListenContent />} />
+          <Route path="reading" element={<ReadContent />} />
+          <Route path="game" element={<Amount />} />
+          <Route path="login" element={<LogIn />} />
+          <Route path="score" element={<Score />} />
+          <Route path="playgame" element={<Interface />} />
+          <Route path="profile" element={<Profile />} />
+          <Route path="register" element={<Register />} />
+        </Routes>
+      </Layout>
+    </div>
+  );
 }
 
 export default App;

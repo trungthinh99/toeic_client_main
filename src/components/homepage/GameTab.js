@@ -9,7 +9,7 @@ function GameTab() {
             <Typography.Paragraph
                 style={{ fontWeight: 'bold', fontSize: 24 }}
             >
-                Game Content
+                Nhập số lượng câu hỏi và... Bắt đầu ôn tập thôi!
             </Typography.Paragraph>
         </Row>
     )

@@ -18,18 +18,18 @@ function Home() {
                 <Row justify="center">
                     <Col>
                         <Tabs defaultActiveKey="3" centered>
-                            <TabPane tab={<span style={{ fontSize: 15, marginLeft: 10, marginRight: 10 }}><FontAwesomeIcon icon={faEye} /> Reading</span>} key="1">
+                            {/* <TabPane tab={<span style={{ fontSize: 15, marginLeft: 10, marginRight: 10 }}><FontAwesomeIcon icon={faEye} /> Reading</span>} key="1">
                                 <ReadTab />
                             </TabPane>
                             <TabPane tab={<span style={{ fontSize: 15, marginLeft: 10, marginRight: 10 }}><FontAwesomeIcon icon={faHeadphones} /> Listening</span>} key="2">
                                 <ListenTab />
-                            </TabPane>
+                            </TabPane> */}
                             <TabPane tab={<span style={{ fontSize: 15, marginLeft: 10, marginRight: 10 }}><FontAwesomeIcon icon={faSmile} /> Welcome</span>} key="3">
                                 <Welcome />
                             </TabPane>
-                            <TabPane tab={<span style={{ fontSize: 15, marginLeft: 10, marginRight: 10 }}><FontAwesomeIcon icon={faBook} /> Vocabulary</span>} key="4">
+                            {/* <TabPane tab={<span style={{ fontSize: 15, marginLeft: 10, marginRight: 10 }}><FontAwesomeIcon icon={faBook} /> Vocabulary</span>} key="4">
                                <VocabTab />
-                            </TabPane>
+                            </TabPane> */}
                             <TabPane tab={<span style={{ fontSize: 15, marginLeft: 10, marginRight: 10 }}><FontAwesomeIcon icon={faGamepad} /> Game</span>} key="5">
                                 <GameTab />
                             </TabPane>

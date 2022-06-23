@@ -23,7 +23,7 @@ function AppHeader() {
     <Header style={{ position: 'relative', zIndex: 1, width: '100%', height: '54px' }}>
       <Row>
         <Col style={{ display: 'flex' }} span={12}>
-          
+
           <Typography.Paragraph className='nav-text' style={{ paddingLeft: 0 }}>
             <Link to="/home" style={{ color: 'white' }}>Home</Link>
           </Typography.Paragraph>
@@ -32,13 +32,13 @@ function AppHeader() {
             <Link to="/vocab" style={{ color: 'white' }}>Vocabulary</Link>
           </Typography.Paragraph>
 
-          <Typography.Paragraph className='nav-text'>
+          {/* <Typography.Paragraph className='nav-text'>
             <Link to="/listen" style={{ color: 'white' }}>Listen</Link>
           </Typography.Paragraph>
 
           <Typography.Paragraph className='nav-text' >
             <Link to="/reading" style={{ color: 'white' }}>Reading</Link>
-          </Typography.Paragraph>
+          </Typography.Paragraph> */}
 
           <Typography.Paragraph className='nav-text'>
             <Link to="/game" style={{ color: 'white' }}>Game</Link>
