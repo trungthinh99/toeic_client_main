@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/toeic_client_main/static/css/main.ee07c4f1.css",
+    "main.js": "/toeic_client_main/static/js/main.4ee2da69.js",
+    "index.html": "/toeic_client_main/index.html",
+    "main.ee07c4f1.css.map": "/toeic_client_main/static/css/main.ee07c4f1.css.map",
+    "main.4ee2da69.js.map": "/toeic_client_main/static/js/main.4ee2da69.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ee07c4f1.css",
+    "static/js/main.4ee2da69.js"
+  ]
+}
